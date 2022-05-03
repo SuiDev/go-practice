@@ -1,0 +1,4 @@
+2022/05/03 07:17:47 main.go:15: test
+2022/05/03 08:26:21 base.go:23: sql: unknown driver "sqlite3" (forgotten import?)
+2022/05/03 12:43:59 main.go:16: test
+2022/05/03 12:44:40 main.go:18: test

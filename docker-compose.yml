@@ -6,4 +6,15 @@ services:
       dockerfile: ./build/Dockerfile
     tty: true
     volumes:
-      - ./cmd:/go/src/app
+      - ./todo_app:/go/src/app
+  mysql:
+    build: ./mysql/
+    volumes:
+        # 初期データを投入するSQLが格納されているdir
+        # - ./mysql/init:/docker-entrypoint-initdb.d
+        # 永続化するときにマウントするdir
+        - ./mysql/data:/var/lib/mysql
+    environment: 
+        - MYSQL_ROOT_PASSWORD=mysql
+    ports:
+        - "3306:3306"
