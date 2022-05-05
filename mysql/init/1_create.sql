@@ -10,3 +10,11 @@ CREATE TABLE users (
     create_at DATETIME,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE todos (
+    id INT(16) AUTO_INCREMENT NOT NULL,
+    content TEXT,
+    user_id INT(16),
+    create_at DATETIME,
+    PRIMARY KEY (id)
+);
